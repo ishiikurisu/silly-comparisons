@@ -15,6 +15,14 @@ rm main
 convert mandelbrot.go.ppm mandelbrot.go.png
 
 # CLOJURE
+cd clj
+lein uberjar
+mv target/uberjar/mandelbrot-0.1.0-SNAPSHOT.jar ../mandelbrot.jar
+cd ..
+java -jar mandelbrot.jar
+convert mandelbrot.clj.ppm mandelbrot.clj.png
+rm temp.end
+rm mandelbrot.jar
 
 # PYTHON
 python3 main.py
